@@ -15,15 +15,40 @@ start with a catkin workspace:
 	echo $ROS_PACKAGE_PATH
 ```
 
+add a new package:
+```
+	cd ./catkin_ws/src
+	catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
+	cd ..
+	catkin_make
+```
+
+Start ros in terminal 1:
+```
+	roscore
+```
+
+In a new terminal 2, Start a new node and check list and info:
+```
+	rosrun turtlesim turtlesim_node __name:=my_turtle #'__name' rename the node
+	rosnode list
+	rosnode info /my_turtle
+	rosnode ping my_turtle #ping the node to see if it is alive
+```
 
 
 
 
 
-roscore
-rosrun package_name node_name
-rosnode list
-rosnode info node_name
-rostopic list
-rostopic echo /topic
-rostopic echo /info
+
+
+
+
+
+```
+	rostopic list
+	rostopic echo /topic
+	rostopic echo /info
+	rostopic type /topic
+	rostopic pub /topic type args
+```
