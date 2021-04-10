@@ -28,18 +28,22 @@ Start ros in terminal 1:
 	roscore
 ```
 
-In a new terminal 2, Start a new node and check list and info:
+In a new terminal 2, Start a new node:
 ```
 	rosrun turtlesim turtlesim_node __name:=my_turtle #'__name' rename the node
+```
+
+And in a new terminal 3, check list and info:
+```
 	rosnode list
 	rosnode info /my_turtle
 	rosnode ping my_turtle #ping the node to see if it is alive
 ```
 
-
-
-
-
+in the terminal 3, now start the teleop node:
+```
+	rosrun turtlesim turtle_teleop_key
+```
 
 
 
