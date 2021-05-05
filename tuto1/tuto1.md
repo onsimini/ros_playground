@@ -25,3 +25,7 @@ if __name__ == '__main__':
 
 
 
+
+to be compare :
+
+catkin_init_workspace vs catkin_make
